@@ -1,0 +1,55 @@
+@import './variable.scss';
+
+#larg_card{
+    width: 456px;
+    height: 140px;
+
+    border: 1px solid rgb(128, 128, 128);
+
+    border-radius: 5px;
+
+    font-family: $mainFont;
+
+    #larg_card_header{
+        height: 40px;
+        width: 100%;
+
+        border-bottom: 1px solid rgb(128, 128, 128);
+        border-radius: 6px 6px 0 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3{
+            margin-left: 40px;
+        }
+
+
+        #larg_card_link{
+            display: flex;
+            align-items: center;
+
+            margin-right: 25px;
+
+            cursor: pointer;
+
+            svg{
+                margin-left: 10px;
+            }
+        }
+    }
+
+    #larg_card_body{
+        display: flex;
+        justify-content: space-between;
+
+        #larg_card_body_left{
+            margin-left: 40px;
+        }
+        
+        #larg_card_body_right{
+            margin-right: 160px;
+        }
+    }
+}

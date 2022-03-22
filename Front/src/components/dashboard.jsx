@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Card from './Card'
+import LargCard from './LargCard'
 
 import '../styles/dashboard.scss'
 
@@ -22,10 +23,18 @@ const dashboard = () => {
             </div>
             <div id='content_top_body'>
                 <Card hex="#f12345" title="Argument" descr="content"></Card>
+                <Card hex="#03A9F5" title="Sell" descr="See my month sells"></Card>
+                <Card hex="#FED600" title="Rent" descr="No details yet"></Card>
+                <Card hex="#f12345" title="Argument" descr="content"></Card>
+
             </div>
         </section>
 
-        <section id='dashboard_content_bottom'></section>
+        <section id='dashboard_content_bottom'>
+            <LargCard></LargCard>
+            <LargCard></LargCard>
+            <LargCard></LargCard>
+        </section>
     </section>
   )
 }
