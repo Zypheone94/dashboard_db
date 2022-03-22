@@ -19,17 +19,18 @@ const Card = ({hex, title, descr}) => {
 
     var color = hexToRgbA(hex)
 
-    console.log(color)
-
   return (
     <div className='card' style={{
-        border: '1px solid rgba(' + color + ')'
+        borderTop: '2px solid rgba(' + color + ')',
+        borderRight: '2px solid rgba(' + color + ')',
+        borderLeft: '2px solid rgba(' + color + ')',
     }}>
         <h4>{title}</h4>
         <p>{descr}</p>
         <div className='card_footer' style={{
             backgroundColor : 'rgba(' + color + ', 0.45)',
-            borderTop: '1px solid rgba(' + color + ')'
+            borderTop: '2px solid rgba(' + color + ')',
+            borderBottom: '2px solid rgba(' + color + ')'
         }}>
             <p>View detail</p>
             <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">

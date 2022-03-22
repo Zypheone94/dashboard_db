@@ -103,9 +103,38 @@
                 display: flex;
                 align-items: center;
             }
+
+            .buttonMenu{
+                display: flex;
+                align-items: center;
+
+                position: absolute;
+                left: 17%;
+                
+                height: 20px;
+                width: 20px;
+
+                cursor: pointer;
+
+                svg{
+                    margin-left: 5px;
+                }
+            }
             
             .active{
                 background-color: #009099;
+            }
+        }
+
+        .sub-menu{
+            background-color: $black2;
+        }
+
+        .inactive{
+            max-height:0;
+            overflow: hidden;
+            svg{
+                display: none;
             }
         }
 
