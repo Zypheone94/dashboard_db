@@ -4,10 +4,14 @@ import 'normalize.css'
 import {
     BrowserRouter as Router,
     Route,
-    Link,
+    Routes,
     NavLink
   } from "react-router-dom";
+
 import bg_test from './assets/bg_test.png'
+
+import Dashboard from "./components/dashboard";
+import Weather from "./components/weather";
 
 function App() {
 
@@ -30,7 +34,6 @@ function App() {
             <path d="M2 17C2.55228 17 3 16.5523 3 16C3 15.4477 2.55228 15 2 15C1.44772 15 1 15.4477 1 16C1 16.5523 1.44772 17 2 17Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <Router>
             <div className="link_router">
               <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12.4444 0H1.55556C0.7 0 0 0.7 0 1.55556V12.4444C0 13.3 0.7 14 1.55556 14H12.4444C13.3 14 14 13.3 14 12.4444V1.55556C14 0.7 13.3 0 12.4444 0ZM1.55556 12.4444V1.55556H6.22222V12.4444H1.55556ZM12.4444 12.4444H7.77778V7H12.4444V12.4444ZM12.4444 5.44444H7.77778V1.55556H12.4444V5.44444Z" fill="white"/>
@@ -118,7 +121,6 @@ function App() {
               </NavLink>
             </div>
             
-          </Router>
         </div>
         <div id="footer_sideBar">
           <p>Created by Maxime DURAND - 2022</p>
@@ -126,7 +128,34 @@ function App() {
         </div>
       </section>
 
-      <section id="content"></section>
+      <section id="content">
+        <section id="search_bar">
+          <div id="input_search_bar">
+            <input type="text" placeholder="Enter your text here"/>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.2596 9.02847H9.61118L9.38138 8.80687C10.3662 7.65786 10.8751 6.09028 10.596 4.42421C10.2103 2.1426 8.30623 0.320595 6.00821 0.0415496C2.53655 -0.385226 -0.385226 2.53655 0.0415496 6.00821C0.320595 8.30623 2.1426 10.2103 4.42421 10.596C6.09028 10.8751 7.65786 10.3662 8.80687 9.38138L9.02847 9.61118V10.2596L12.5165 13.7476C12.853 14.0841 13.4029 14.0841 13.7394 13.7476C14.0759 13.4111 14.0759 12.8612 13.7394 12.5247L10.2596 9.02847ZM5.33521 9.02847C3.29161 9.02847 1.64196 7.37881 1.64196 5.33521C1.64196 3.29161 3.29161 1.64196 5.33521 1.64196C7.37881 1.64196 9.02847 3.29161 9.02847 5.33521C9.02847 7.37881 7.37881 9.02847 5.33521 9.02847Z" fill="#1D242E"/>
+            </svg>
+          </div>
+          <div id="language">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.725 12.5583L8.60833 10.4667L8.63333 10.4417C10.0833 8.82499 11.1167 6.96666 11.725 4.99999H14.1667V3.33332H8.33333V1.66666H6.66666V3.33332H0.833328V4.99166H10.1417C9.58333 6.59999 8.69999 8.12499 7.49999 9.45832C6.72499 8.59999 6.08333 7.65832 5.57499 6.66666H3.90833C4.51666 8.02499 5.34999 9.30832 6.39166 10.4667L2.14999 14.65L3.33333 15.8333L7.49999 11.6667L10.0917 14.2583L10.725 12.5583ZM15.4167 8.33332H13.75L9.99999 18.3333H11.6667L12.6 15.8333H16.5583L17.5 18.3333H19.1667L15.4167 8.33332ZM13.2333 14.1667L14.5833 10.5583L15.9333 14.1667H13.2333Z" fill="#1D242E"/>
+            </svg>
+            <p>English (Us)</p>
+            <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.77405 0.209396L3.99642 2.98702L1.21879 0.209396C0.939597 -0.0697987 0.488591 -0.0697987 0.209396 0.209396C-0.0697987 0.488591 -0.0697987 0.939597 0.209396 1.21879L3.4953 4.5047C3.7745 4.78389 4.2255 4.78389 4.5047 4.5047L7.7906 1.21879C8.0698 0.939597 8.0698 0.488591 7.7906 0.209396C7.51141 -0.0626398 7.05324 -0.0697987 6.77405 0.209396Z" fill="#1D242E"/>
+            </svg>
+          </div>
+          <div id="weather">
+          </div>
+        </section>
+
+        <section id="content_body">
+        <Routes>
+          <Route path="/" element={<Dashboard />}> </Route>
+          <Route path="/inventory" element={<Weather />}> </Route>
+        </Routes>
+        </section>
+      </section>
     </section>
   )
 }
