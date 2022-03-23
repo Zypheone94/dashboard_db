@@ -11,7 +11,7 @@
     font-family: $mainFont;
 
     #larg_card_header{
-        height: 40px;
+        height: 30%;
         width: 100%;
 
         border-bottom: 1px solid rgb(128, 128, 128);
@@ -23,6 +23,12 @@
 
         h3{
             margin-left: 40px;
+            font-size: $f16;
+            font-weight: semi-bold;
+        }
+
+        p{
+            font-size: $f12;
         }
 
 
@@ -41,15 +47,34 @@
     }
 
     #larg_card_body{
+        height: 70%;
+
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         #larg_card_body_left{
             margin-left: 40px;
+
+            h3{
+                font-size: $f16;
+            }
+
+            p{
+                font-size: $f14;
+            }
         }
         
         #larg_card_body_right{
             margin-right: 160px;
+
+            h3{
+                font-size: $f16;
+            }
+
+            p{
+                font-size: $f14;
+            }
         }
     }
 }
