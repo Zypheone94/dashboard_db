@@ -2,7 +2,7 @@ import React from 'react'
 
 import '../styles/Card.scss'
 
-const Card = ({hex, title, descr}) => {
+const Card = ({hex, title, descr, svg}) => {
 
     function hexToRgbA(hex){
         var c;
@@ -21,12 +21,16 @@ const Card = ({hex, title, descr}) => {
 
   return (
     <div className='card' style={{
+        backgroundColor: 'white',
         borderTop: '2px solid rgba(' + color + ')',
         borderRight: '2px solid rgba(' + color + ')',
         borderLeft: '2px solid rgba(' + color + ')',
     }}>
-        <h4>{title}</h4>
-        <p>{descr}</p>
+        <div id='card_content'>
+            {svg == null ? '' : svg}
+            <h4>{title}</h4>
+            <p>{descr}</p>
+        </div>
         <div className='card_footer' style={{
             backgroundColor : 'rgba(' + color + ', 0.45)',
             borderTop: '2px solid rgba(' + color + ')',

@@ -12,6 +12,7 @@ import {
 import bg_test from './assets/bg_test.png'
 
 import Dashboard from "./components/dashboard";
+import Inventory from "./components/Inventory";
 import Weather from "./components/weather";
 import SubMenu from "./components/SubMenu";
 
@@ -184,7 +185,7 @@ function App() {
         <section id="content_body">
         <Routes>
           <Route path="/" element={<Dashboard />}> </Route>
-          <Route path="/inventory" element={<Weather />}> </Route>
+          <Route path="/inventory" element={<Inventory />}> </Route>
         </Routes>
         </section>
       </section>

@@ -13,17 +13,30 @@
 
     font-family: $mainFont;
 
-    h4 {
-        font-size: $f20;
-        margin-bottom: 0;
-    }
+    #card_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
 
-    p{
-        margin-top: 0;
+        height: 100%;
+        width: 100%;
 
-        font-size: $f14;
-        font-weight: medium;
+        padding-bottom: 3px;
+
+        h4 {
+            font-size: $f20;
+            margin-bottom: 0;
+        }
+    
+        p{
+            margin-top: 0;
+    
+            font-size: $f14;
+            font-weight: medium;
+        }
     }
+    
 
     .card_footer{
         width: 100%;

@@ -12,7 +12,7 @@ const dashboard = () => {
             <div id='content_top_header'>
                 <div id='content_top_header_title'>
                     <h3>Dashboard</h3>
-                    <p>A quick data overview of the inventory</p>
+                    <p>A quick data overview of the inventory.</p>
                 </div>
                 <div id='content_top_header_download'>
                     <p>Download Report</p>
@@ -22,7 +22,11 @@ const dashboard = () => {
                 </div>
             </div>
             <div id='content_top_body'>
-                <Card hex="#f12345" title="Argument" descr="content"></Card>
+                <Card hex="#f12345" title="Argument" descr="content" 
+                svg={<svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.5 9.23456L30.1088 29.2916H6.89125L18.5 9.23456ZM18.5 3.08331L1.54167 32.375H35.4583L18.5 3.08331ZM20.0417 24.6666H16.9583V27.75H20.0417V24.6666ZM20.0417 15.4166H16.9583V21.5833H20.0417V15.4166Z" fill="#F0483E"/>
+                </svg>
+                }></Card>
                 <Card hex="#03A9F5" title="Sell" descr="See my month sells"></Card>
                 <Card hex="#FED600" title="Rent" descr="No details yet"></Card>
                 <Card hex="#f12345" title="Argument" descr="content"></Card>
